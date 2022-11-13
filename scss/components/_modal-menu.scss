@@ -1,8 +1,8 @@
 .modal-menu {
     @media (min-width:481px) {
-        display: none;
+        // display: none;
     }
-    @media (max-width:480px) {
+    @media (max-width:768px) {
         &__close {
             position: absolute;
             right: 25px;
@@ -88,31 +88,30 @@
     }
 }
 
+.container__modal-menu {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: var(--white-color);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
 
-// .modal-menu {}
+.container__modal-menu.is-open {
+    transform: translateX(0);
+}
 
-// .modal-menu__close {
-//     position: absolute;
-//     right: 25px;
-//     top: 21px;
-// }
-
-// .modal-menu__icon {}
-
-// .modal-menu__nav {}
-
-// .modal-menu__text {}
-
-// .modal-menu__link {}
-
-// .modal-menu__address {}
-
-// .modal-menu__address-phone {}
-
-// .modal-menu__address-phone-link {}
-
-// .modal-menu__socials {}
-
-// .modal-menu__social {}
-
-// .modal-menu__social-link {}
+.container__modal-menu .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
